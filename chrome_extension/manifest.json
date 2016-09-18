@@ -1,0 +1,19 @@
+{
+  "name": "Context Menus Sample (with Event Page)",
+  "description": "Shows some of the features of the Context Menus API using an event page",
+  "version": "0.7",
+  "permissions": ["contextMenus", "tabs", "activeTab"],
+  "browser_action": {
+      "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["jquery.js", "sample.js"]
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+  {
+      "matches": ["http://*/*"],
+      "js": ["jquery.js"]
+  }
+  ]
+}
